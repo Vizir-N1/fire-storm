@@ -1,0 +1,13 @@
+{
+  "name": "fire-storm-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FIRE STORM — accounts, rooms by code, 1v1 duels over WebSocket",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "better-sqlite3": "^11.5.0",
+    "ws": "^8.18.0"
+  }
+}

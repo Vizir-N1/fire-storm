@@ -1,0 +1,19 @@
+# Blueprint для Render (New → Blueprint). Платный вариант с диском: аккаунты и прогресс сохраняются.
+# Для бесплатной ПРОБЫ без сохранения аккаунтов см. README, раздел «Вариант А».
+services:
+  - type: web
+    name: fire-storm
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DB_PATH
+        value: /var/data/firestorm.db
+    disk:
+      name: fire-storm-data
+      mountPath: /var/data
+      sizeGB: 1
